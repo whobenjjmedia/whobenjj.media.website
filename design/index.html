@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Design | whobenjj.media – Posters and Social Content</title>
+<meta name="description" content="Design work by Rubem: posters and social content for athletes, events and gyms.">
+<link rel="canonical" href="https://whobenjj.com/design/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%B7%3C/text%3E%3C/svg%3E">
+<meta property="og:url" content="https://whobenjj.com/design/">
+<meta property="og:image" content="https://whobenjj.com/images/og-share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap">
+<style>
+:root{
+  --blue:#FF4A1C; --lime:#FF4A1C; --sand:#F3EEE8;
+  --bg:#FDFDFE; --ink:#0c1a26; --muted:#5a6b7a; --line:#E8E1D8; --card:#F3EEE8;
+  --on-lime:#0c1a26;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0a1219;--ink:#fdfdfe;--muted:#9fb0bf;--line:#1d2a36;--card:#111c26;color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#0a1219;--ink:#fdfdfe;--muted:#9fb0bf;--line:#1d2a36;--card:#111c26;color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:17px;line-height:1.55}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+header{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-weight:800;text-decoration:none;letter-spacing:-.01em}
+.brand i{font-style:normal;color:var(--blue)}
+nav{display:flex;gap:22px;align-items:center}
+nav a{text-decoration:none;font-size:15px;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1.5px solid #FF4A1C;border-radius:999px;background:#FF4A1C;color:#0c1a26;font:inherit;font-weight:600;padding:10.5px 22px;text-decoration:none;cursor:pointer;transition:background .2s,color .2s}
+.btn svg{transition:transform .2s}
+.btn:hover{background:var(--bg);color:var(--ink);border-color:#FF4A1C}
+.btn:hover svg{transform:translateX(3px)}
+
+.hero{padding:72px 0 48px}
+h1{font-size:clamp(40px,8vw,84px);line-height:1;letter-spacing:-.035em;font-weight:800;margin:0 0 20px;max-width:12ch}
+.hero p{max-width:46ch;color:var(--muted);margin:0 0 28px;font-size:19px}
+.hero .row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.link{color:#C93410;font-weight:600;text-decoration:none;padding:12px 4px}
+.link:hover{text-decoration:underline}
+
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+figure{margin:0;border-radius:10px;overflow:hidden;position:relative;background:var(--card);aspect-ratio:4/5}
+figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+#work{padding-top:8px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0 0 24px;padding:0}
+.tags li{border:1px solid var(--line);border-radius:999px;padding:6px 16px;font-size:15px;cursor:default;user-select:none}
+.more-text{margin:40px 0 0;text-align:center;color:var(--muted)}
+.more{margin:16px 0 0;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+@media (prefers-reduced-motion:reduce){.btn,.btn svg{transition:none}}
+.note{color:var(--muted);font-size:14px;margin-top:4px}
+
+.design-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.dcard{border-radius:10px;overflow:hidden;background:var(--card)}
+.dcard .dph{aspect-ratio:4/3}
+.dcard p{margin:0;padding:12px 14px;font-size:15px}
+.dcard span{color:var(--muted)}
+.lead{color:var(--muted);max-width:52ch;margin:0 0 24px}
+section{padding:56px 0}
+h2{font-size:clamp(28px,4vw,40px);letter-spacing:-.025em;line-height:1.1;margin:0 0 12px}
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:stretch}
+.about p{margin:0 0 14px;max-width:56ch}
+.ig{display:inline-flex;align-items:center;gap:8px;font-weight:600;text-decoration:none;color:var(--ink);padding:6px 0}
+.ig:hover{color:#C93410}
+.ig-foot{display:inline-flex;color:var(--muted);padding:4px}
+.ig-foot:hover{color:#C93410}
+.portrait{border-radius:12px;min-height:240px;background:linear-gradient(135deg,#FF4A1C,#F3EEE8 70%)}
+.services{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.services li{border:1px solid var(--line);border-radius:999px;padding:8px 20px;font-size:15px}
+
+
+.book{background:var(--sand);color:var(--on-lime);border-radius:16px;padding:40px;display:grid;grid-template-columns:1fr 1.2fr;gap:40px}
+.book p{margin:0 0 12px;max-width:34ch}
+form{display:grid;gap:14px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:grid;gap:5px;font-size:14px;font-weight:600}
+input,select,textarea{font:inherit;font-weight:400;color:#0c1a26;background:#FDFDFE;border:1px solid transparent;border-radius:8px;padding:11px 12px;width:100%}
+textarea{min-height:96px;resize:vertical}
+.book :focus-visible{outline-color:#0c1a26}
+#done{display:none;background:#FDFDFE;border-radius:10px;padding:16px;font-size:15px}
+#done a{color:#C93410;font-weight:600}
+
+footer{padding:32px 0 48px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:24px}
+
+@media (max-width:760px){
+  .about,.book{grid-template-columns:1fr}
+  .book{padding:24px}
+  .two{grid-template-columns:1fr}
+  nav a:not(.btn){display:none}
+  .hero{padding-top:48px}
+  .grid{grid-template-columns:repeat(2,1fr);gap:10px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+.pf{padding-top:40px;padding-bottom:24px}
+.pf h1{font-size:clamp(36px,6vw,64px);max-width:none;margin:0 0 12px}
+.masonry{columns:3;column-gap:16px}
+.masonry figure{margin:0 0 16px;break-inside:avoid;aspect-ratio:auto;display:block}
+.masonry figure img{position:static;inset:auto;width:100%;height:auto;object-fit:fill;display:block}
+@media (max-width:760px){.masonry{columns:2;column-gap:10px}.masonry figure{margin-bottom:10px}}
+
+figure{cursor:zoom-in}
+@media (hover:hover){figure img{transition:transform .35s}figure:hover img{transform:scale(1.03)}}
+figure:focus-visible{outline:3px solid #FF4A1C;outline-offset:3px}
+.lb{position:fixed;inset:0;z-index:100;background:rgba(6,12,18,.94);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:56px 16px 24px;color:#fff;box-sizing:border-box}
+.lb[hidden]{display:none}
+.lb img{max-width:min(92vw,900px);max-height:calc(100vh - 150px);max-height:calc(100dvh - 150px);width:auto;height:auto;object-fit:contain;border-radius:6px;display:block}
+.lb p{margin:0;font-size:14px;color:rgba(255,255,255,.75);text-align:center;max-width:70ch}
+.lb button{position:absolute;border:0;border-radius:999px;width:44px;height:44px;background:rgba(255,255,255,.14);color:#fff;font-size:26px;line-height:1;cursor:pointer;display:grid;place-items:center;font-family:inherit}
+.lb button:hover{background:#FF4A1C;color:#0c1a26}
+.lb-x{top:calc(12px + env(safe-area-inset-top,0px));right:16px}
+.lb-prev{left:16px;top:50%;transform:translateY(-50%)}
+.lb-next{right:16px;top:50%;transform:translateY(-50%)}
+@media (max-width:760px){.lb{padding-bottom:80px}.lb-prev,.lb-next{top:auto;bottom:calc(16px + env(safe-area-inset-bottom,0px));transform:none}.lb-prev{left:24px}.lb-next{right:24px}.lb p{padding:0 8px}}
+.masonry.js{display:flex;gap:16px;columns:auto;align-items:stretch}
+.masonry.js .mcol{flex:1 1 0;min-width:0;display:flex;flex-direction:column;gap:16px}
+.masonry.js figure{margin:0;flex:1 1 auto;position:relative}
+.masonry.js figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+@media (max-width:760px){.masonry.js{gap:10px}.masonry.js .mcol{gap:10px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="../">whobenjj<i>.</i>media</a>
+    <nav aria-label="Main">
+      <a href="../">Home</a>
+      <a href="../photography/">Photography</a>
+      <a class="btn" href="../#book">Book a project <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="wrap pf">
+    <h1>Design</h1>
+    <p class="lead">Posters and social content for athletes, events and gyms.</p>
+    <ul class="tags" aria-label="Design services"><li>Posters</li><li>Social content</li></ul>
+    <div class="masonry">
+      <figure><img src="../images/design-100-rollz-event-poster-with-repeated-red-type-two-athletes-standing-and-the-date.webp" alt="100 Rollz event poster with repeated red type, two athletes standing and the date 3.10.26" width="800" height="1000" loading="eager" decoding="async"></figure>
+      <figure><img src="../images/design-black-and-white-halftone-poster-of-a-fighter-with-the-word-thug-and-a-block-of-s.webp" alt="Black and white halftone poster of a fighter with the word THUG and a block of small text" width="800" height="1131" loading="eager" decoding="async"></figure>
+      <figure><img src="../images/design-free-womens-class-poster-pearce-martial-arts.webp" alt="Free women’s class poster for Pearce Martial Arts with a smiling athlete holding stacked medals" width="800" height="1422" loading="eager" decoding="async"></figure>
+      <figure><img src="../images/design-red-official-partner-poster-with-a-bold-name-along-the-bottom.webp" alt="Red official partner poster with a bold name along the bottom" width="800" height="1132" loading="eager" decoding="async"></figure>
+      <figure><img src="../images/design-sponsor-spotlight-poster-for-ironwood-athletic-physiotherapy-with-a-handshake-gr.webp" alt="Sponsor Spotlight poster for Ironwood Athletic physiotherapy with a handshake graphic" width="800" height="1000" loading="eager" decoding="async"></figure>
+      <figure><img src="../images/design-high-contrast-black-and-white-poster-with-stylised-title-type-and-a-three-panel.webp" alt="High-contrast black and white poster with stylised title type and a three-panel grappling layout" width="800" height="1000" loading="eager" decoding="async"></figure>
+      <figure><img src="../images/design-black-and-white-soccer-poster-with-gothic-lettering-and-cutout-match-photos.webp" alt="Black and white soccer poster with gothic lettering and cutout match photos" width="800" height="1000" loading="eager" decoding="async"></figure>
+      <figure><img src="../images/design-fighter-poster-with-a-raised-arms-hero-shot-a-mountain-backdrop-and-bold-white-a.webp" alt="Fighter poster with a raised-arms hero shot, a mountain backdrop and bold white and orange type" width="800" height="1131" loading="lazy" decoding="async"></figure>
+      <figure><img src="../images/design-black-and-white-soccer-poster-with-large-raul-10-type-three-action-photos-and-a.webp" alt="Black and white soccer poster with large RAUL 10 type, three action photos and a school crest" width="800" height="1000" loading="lazy" decoding="async"></figure>
+      <figure><img src="../images/design-black-and-white-poster-of-a-fighter-holding-two-championship-belts-with-the-word.webp" alt="Black and white poster of a fighter holding two championship belts with the word Believe repeated" width="800" height="1000" loading="lazy" decoding="async"></figure>
+      <figure><img src="../images/design-black-and-white-t-shirt-graphic-with-two-snarling-dogs-and-the-words-old-dogs-ne.webp" alt="Black and white t-shirt graphic with two snarling dogs and the words Old Dogs New Tricks" width="800" height="1132" loading="lazy" decoding="async"></figure>
+      <figure><img src="../images/design-pgc7-tournament-bracket-poster-with-four-teams-extreme-tauranga-iwr-and-syzygy.webp" alt="PGC7 tournament bracket poster with four teams: Extreme, Tauranga, IWR and Syzygy" width="800" height="1000" loading="lazy" decoding="async"></figure>
+      <figure><img src="../images/design-pgc7-event-poster-iwr-versus-etk-xtreme-with-yellow-toned-team-portraits.webp" alt="PGC7 event poster, IWR versus ETK Xtreme, with yellow-toned team portraits" width="800" height="1000" loading="lazy" decoding="async"></figure>
+      <figure><img src="../images/design-pgc7-event-poster-team-tauranga-versus-team-syzygy-with-yellow-toned-portraits-a.webp" alt="PGC7 event poster, Team Tauranga versus Team Syzygy, with yellow-toned portraits and the date 11 July" width="800" height="1000" loading="lazy" decoding="async"></figure>
+      <figure><img src="../images/design-green-halftone-poster-for-a-jiu-jitsu-mma-and-wrestling-coach-with-gym-details.webp" alt="Green halftone poster for a jiu-jitsu, MMA and wrestling coach with gym details" width="800" height="1132" loading="lazy" decoding="async"></figure>
+      <figure><img src="../images/design-100-rollz-event-poster-with-a-jiu-jitsu-photo-behind-repeated-red-type.webp" alt="100 Rollz event poster with a jiu-jitsu photo behind repeated red type" width="800" height="1000" loading="lazy" decoding="async"></figure>
+      <figure><img src="../images/design-poster-with-repeated-blue-name-type-and-a-young-athlete-standing-in-front.webp" alt="Poster with repeated blue name type and a young athlete standing in front" width="800" height="1292" loading="lazy" decoding="async"></figure>
+      <figure><img src="../images/design-black-and-white-poster-of-a-fighter-with-arms-raised-and-the-line-it-s-just-me-a.webp" alt="Black and white poster of a fighter with arms raised and the line it’s just me against the world" width="800" height="1000" loading="lazy" decoding="async"></figure>
+      <figure><img src="../images/design-pgc7-bracket-poster-with-team-names-and-a-500-dollar-prize.webp" alt="PGC7 bracket poster with team names and a 500 dollar prize" width="800" height="1000" loading="lazy" decoding="async"></figure>
+    </div>
+    <p class="more-text">Want to see more? Head to my Instagram for more of my work.</p>
+    <p class="more"><a class="btn" href="https://instagram.com/whobenjj.media" target="_blank" rel="noopener">See more on Instagram <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a> <a class="btn" href="../#book">Book a project <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <span>© 2026 whobenjj.media</span>
+    <a class="ig-foot" href="https://instagram.com/whobenjj.media" target="_blank" rel="noopener" aria-label="Instagram @whobenjj.media"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg></a>
+  </div>
+</footer>
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lb-x" type="button" aria-label="Close">&times;</button>
+  <button class="lb-prev" type="button" aria-label="Previous image">&#8249;</button>
+  <img id="lbimg" alt="">
+  <p id="lbcap"></p>
+  <button class="lb-next" type="button" aria-label="Next image">&#8250;</button>
+</div>
+<script>
+(function(){
+var m=document.querySelector(".masonry");if(!m)return;
+var figs=[].slice.call(m.children);m._figs=figs;
+figs.forEach(function(f){var i=f.querySelector("img");f.style.aspectRatio=i.getAttribute("width")+" / "+i.getAttribute("height")});
+var cols=0,mq=window.matchMedia("(max-width:760px)");
+function build(){var n=mq.matches?2:3;if(n===cols)return;cols=n;m.classList.add("js");m.textContent="";
+ var cs=[],hs=[];for(var i=0;i<n;i++){var c=document.createElement("div");c.className="mcol";m.appendChild(c);cs.push(c);hs.push(0)}
+ figs.forEach(function(f){var im=f.querySelector("img"),r=im.getAttribute("height")/im.getAttribute("width")+.04,k=hs.indexOf(Math.min.apply(null,hs));cs[k].appendChild(f);hs[k]+=r})}
+build();(mq.addEventListener?mq.addEventListener("change",build):mq.addListener(build));
+})();
+(function(){
+var lb=document.getElementById("lb"),im=document.getElementById("lbimg"),cap=document.getElementById("lbcap");
+var list=[],idx=0,opener=null,SEL=".grid figure,.masonry figure";
+function itemsOf(g){return g._figs||[].slice.call(g.querySelectorAll("figure"))}
+function show(i){idx=(i+list.length)%list.length;var s=list[idx].querySelector("img");im.src=s.src;im.alt=s.alt;cap.textContent=(idx+1)+" / "+list.length+" \u00b7 "+s.alt}
+function open(f){var g=f.closest(".grid,.masonry");list=itemsOf(g);opener=f;show(list.indexOf(f));lb.hidden=false;document.documentElement.style.overflow="hidden";lb.querySelector(".lb-x").focus()}
+function close(){lb.hidden=true;im.removeAttribute("src");document.documentElement.style.overflow="";if(opener)opener.focus()}
+document.addEventListener("click",function(e){
+ if(!lb.hidden){if(e.target===lb||e.target.closest(".lb-x"))close();else if(e.target.closest(".lb-prev"))show(idx-1);else if(e.target.closest(".lb-next"))show(idx+1);return}
+ var f=e.target.closest(SEL);if(f)open(f)});
+document.addEventListener("keydown",function(e){
+ if(lb.hidden){if((e.key==="Enter"||e.key===" ")&&e.target.matches&&e.target.matches(SEL)){e.preventDefault();open(e.target)}return}
+ if(e.key==="Escape")close();else if(e.key==="ArrowLeft")show(idx-1);else if(e.key==="ArrowRight")show(idx+1)});
+var sx=null;lb.addEventListener("touchstart",function(e){sx=e.touches[0].clientX},{passive:true});
+lb.addEventListener("touchend",function(e){if(sx===null)return;var d=e.changedTouches[0].clientX-sx;sx=null;if(Math.abs(d)>50)show(idx+(d<0?1:-1))});
+window.lbInit=function(){[].slice.call(document.querySelectorAll(SEL)).forEach(function(f){f.tabIndex=0;f.setAttribute("role","button");f.setAttribute("aria-label","Enlarge image: "+f.querySelector("img").alt)})};
+lbInit();
+})();
+</script>
+</body>
+</html>
