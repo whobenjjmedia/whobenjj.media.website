@@ -310,7 +310,7 @@ figure:focus-visible{outline:3px solid #FF4A1C;outline-offset:3px}
 <script>
 var types={Photography:["Sports","Portrait","Street or travel","Other event","Something else"],Design:["Posters and flyers","Social content","Something else"]};
 document.getElementById("project").addEventListener("change",function(){var t=document.getElementById("type");document.getElementById("locL").style.display=this.value==="Design"?"none":"";t.innerHTML="";types[this.value].forEach(function(o){var op=document.createElement("option");op.textContent=o;t.appendChild(op)})});
-var FORM={accessKey:"",endpoint:"96723abf-b78e-4494-9bc6-f5db61951166"};
+var FORM={accessKey:"96723abf-b78e-4494-9bc6-f5db61951166",endpoint:"96723abf-b78e-4494-9bc6-f5db61951166"};
 /* To receive booking requests by email, paste a Web3Forms access key above, or a Formspree form URL in endpoint. */
 document.getElementById("f").addEventListener("submit",function(e){
   e.preventDefault();
