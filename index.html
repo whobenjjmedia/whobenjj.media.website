@@ -151,6 +151,18 @@ figure:focus-visible{outline:3px solid #FF4A1C;outline-offset:3px}
 .lb-prev{left:16px;top:50%;transform:translateY(-50%)}
 .lb-next{right:16px;top:50%;transform:translateY(-50%)}
 @media (max-width:760px){.lb{padding-bottom:80px}.lb-prev,.lb-next{top:auto;bottom:calc(16px + env(safe-area-inset-bottom,0px));transform:none}.lb-prev{left:24px}.lb-next{right:24px}.lb p{padding:0 8px}}
+
+.pk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.pk h3{margin:0 0 4px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.pkg{padding:16px 0;border-top:1px solid var(--line)}
+.pkg b{display:block;font-size:18px}
+.pkg span{display:block;color:var(--muted);font-size:15px;margin:2px 0 10px}
+.pkr{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.price{font-style:normal;font-weight:800;font-size:22px;letter-spacing:-.01em}
+.pklink{color:#C93410;font-weight:600;text-decoration:none;padding:6px 0}
+.pklink:hover{text-decoration:underline}
+.pk-note{color:var(--muted);font-size:15px;max-width:70ch;margin:24px 0 0}
+@media (max-width:760px){.pk-grid{grid-template-columns:1fr;gap:24px}}
 </style>
 </head>
 <body>
@@ -160,6 +172,7 @@ figure:focus-visible{outline:3px solid #FF4A1C;outline-offset:3px}
     <nav aria-label="Main">
       <a href="#work">Photography</a>
       <a href="#design">Design</a>
+      <a href="#packages">Packages</a>
       <a href="#about">About</a>
       <a class="btn" href="#book">Book a project <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </nav>
@@ -217,6 +230,31 @@ figure:focus-visible{outline:3px solid #FF4A1C;outline-offset:3px}
     </div>
   </section>
 
+  <section id="packages">
+    <div class="wrap">
+      <h2>Packages</h2>
+      <p class="lead">Simple starting prices in NZD. Every package includes edited photos or finished files, delivered online.</p>
+      <div class="pk-grid">
+      <div class="pk"><h3>Portraits</h3>
+        <div class="pkg"><b>Portrait Mini</b><span>30 min, 1 location, 10 edited photos</span><div class="pkr"><i class="price">$150</i><a class="pklink" href="#book" data-project="Photography" data-type="Portrait" data-pkg="Portrait Mini" data-price="$150">Book &rarr;</a></div></div>
+        <div class="pkg"><b>Portrait Session</b><span>1 hour, up to 2 locations, 20 edited photos</span><div class="pkr"><i class="price">$280</i><a class="pklink" href="#book" data-project="Photography" data-type="Portrait" data-pkg="Portrait Session" data-price="$280">Book &rarr;</a></div></div>
+        <div class="pkg"><b>Portrait Extended</b><span>2 hours, several looks or locations, 35 edited photos</span><div class="pkr"><i class="price">$480</i><a class="pklink" href="#book" data-project="Photography" data-type="Portrait" data-pkg="Portrait Extended" data-price="$480">Book &rarr;</a></div></div>
+      </div>
+      <div class="pk"><h3>Sports and events</h3>
+        <div class="pkg"><b>Coverage</b><span>Sports or events, edited online gallery, 2 hour minimum</span><div class="pkr"><i class="price">$150 / hr</i><a class="pklink" href="#book" data-project="Photography" data-type="Sports" data-pkg="Coverage" data-price="$150 / hr">Book &rarr;</a></div></div>
+        <div class="pkg"><b>Half day</b><span>4 hours of coverage, 60+ edited photos</span><div class="pkr"><i class="price">$520</i><a class="pklink" href="#book" data-project="Photography" data-type="Sports" data-pkg="Half day" data-price="$520">Book &rarr;</a></div></div>
+        <div class="pkg"><b>Full day</b><span>8 hours of coverage, full edited gallery</span><div class="pkr"><i class="price">$950</i><a class="pklink" href="#book" data-project="Photography" data-type="Sports" data-pkg="Full day" data-price="$950">Book &rarr;</a></div></div>
+      </div>
+      <div class="pk"><h3>Design</h3>
+        <div class="pkg"><b>Poster or social post</b><span>One finished design</span><div class="pkr"><i class="price">from $90</i><a class="pklink" href="#book" data-project="Design" data-type="Posters and flyers" data-pkg="Poster or social post" data-price="from $90">Book &rarr;</a></div></div>
+        <div class="pkg"><b>Event design pack</b><span>Poster, 3 social posts and a story</span><div class="pkr"><i class="price">$320</i><a class="pklink" href="#book" data-project="Design" data-type="Posters and flyers" data-pkg="Event design pack" data-price="$320">Book &rarr;</a></div></div>
+        <div class="pkg"><b>Event bundle</b><span>3 hours of coverage plus the design pack</span><div class="pkr"><i class="price">$650</i><a class="pklink" href="#book" data-project="Photography" data-type="Other event" data-pkg="Event bundle" data-price="$650">Book &rarr;</a></div></div>
+      </div>
+      </div>
+      <p class="pk-note">Add-ons: rush delivery +$75, extra hour +$120, extra edited photos $8 each. A 50% deposit holds your date, and travel outside Auckland, Tauranga and Raglan is covered by the client. Need something different? Ask for a custom quote in the form below.</p>
+    </div>
+  </section>
+
   <section id="about">
     <div class="wrap about">
       <div>
@@ -253,6 +291,7 @@ figure:focus-visible{outline:3px solid #FF4A1C;outline-offset:3px}
           <label>Preferred date<input id="date" type="date"></label>
           <label id="locL">Location<input id="loc" placeholder="City or venue"></label>
           <label>Details<textarea id="msg" placeholder="Ideas, number of people, references"></textarea></label>
+          <input id="hp" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
           <button class="btn" type="submit">Send booking request <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
           <div id="done" role="status"></div>
         </form>
@@ -271,15 +310,29 @@ figure:focus-visible{outline:3px solid #FF4A1C;outline-offset:3px}
 <script>
 var types={Photography:["Sports","Portrait","Street or travel","Other event","Something else"],Design:["Posters and flyers","Social content","Something else"]};
 document.getElementById("project").addEventListener("change",function(){var t=document.getElementById("type");document.getElementById("locL").style.display=this.value==="Design"?"none":"";t.innerHTML="";types[this.value].forEach(function(o){var op=document.createElement("option");op.textContent=o;t.appendChild(op)})});
+var FORM={accessKey:"",endpoint:"96723abf-b78e-4494-9bc6-f5db61951166"};
+/* To receive booking requests by email, paste a Web3Forms access key above, or a Formspree form URL in endpoint. */
 document.getElementById("f").addEventListener("submit",function(e){
   e.preventDefault();
   var g=function(id){return document.getElementById(id).value.trim()};
-  var done=document.getElementById("done");
-  if(!g("name")||!g("email")){done.style.display="block";done.textContent="Add your name and email so I can reply.";return}
-  var text="Booking request\nName: "+g("name")+"\nEmail: "+g("email")+"\nProject: "+g("project")+", "+g("type")+"\nDate: "+(g("date")||"Flexible")+(g("project")==="Design"?"":"\nLocation: "+(g("loc")||"Not sure yet"))+"\nDetails: "+(g("msg")||"-");
-  try{navigator.clipboard.writeText(text)}catch(err){}
-  done.style.display="block";
-  done.innerHTML='Request copied. <a href="https://ig.me/m/whobenjj.media" target="_blank" rel="noopener">Open Instagram</a> and paste it into a message to send.';
+  var done=document.getElementById("done"),btn=this.querySelector("button[type=submit]");
+  var show=function(h){done.style.display="block";done.innerHTML=h};
+  if(!g("name")||!/^\S+@\S+\.\S+$/.test(g("email"))){show("Add your name and a valid email so I can reply.");return}
+  var design=g("project")==="Design";
+  var text="Booking request\nName: "+g("name")+"\nEmail: "+g("email")+"\nProject: "+g("project")+", "+g("type")+"\nDate: "+(g("date")||"Flexible")+(design?"":"\nLocation: "+(g("loc")||"Not sure yet"))+"\nDetails: "+(g("msg")||"-");
+  var dm=function(){try{navigator.clipboard.writeText(text)}catch(err){}show('Request copied. <a href="https://ig.me/m/whobenjj.media" target="_blank" rel="noopener">Open Instagram</a> and paste it into a message to send.')};
+  if(!FORM.accessKey&&!FORM.endpoint){dm();return}
+  if(document.getElementById("hp").value)return;
+  var data={name:g("name"),email:g("email"),project:g("project"),type:g("type"),date:g("date")||"Flexible",message:g("msg")||"-",subject:"New booking request from whobenjj.com",from_name:"whobenjj.com"};
+  if(!design)data.location=g("loc")||"Not sure yet";
+  var url=FORM.accessKey?"https://api.web3forms.com/submit":FORM.endpoint;
+  if(FORM.accessKey)data.access_key=FORM.accessKey;
+  var who=g("name"),f=this,label=btn.innerHTML;btn.disabled=true;btn.textContent="Sending\u2026";
+  fetch(url,{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify(data)})
+  .then(function(r){return r.json().catch(function(){return{}}).then(function(j){if(!r.ok||j.success===false)throw 0})})
+  .then(function(){f.reset();document.getElementById("project").dispatchEvent(new Event("change"));show("Thanks "+who+"! Your request is sent. I\u2019ll reply within two days.")})
+  .catch(function(){dm();done.insertAdjacentHTML("afterbegin","Couldn\u2019t send it by email. ")})
+  .then(function(){btn.disabled=false;btn.innerHTML=label});
 });
 </script>
 <div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Image viewer">
@@ -315,6 +368,16 @@ var w=document.querySelector(".hero-wrap");
 if(!w||!matchMedia("(pointer:fine)").matches||matchMedia("(prefers-reduced-motion:reduce)").matches)return;
 w.addEventListener("pointermove",function(e){var r=w.getBoundingClientRect();w.style.setProperty("--mx",((e.clientX-r.left)/r.width-.5)*2);w.style.setProperty("--my",((e.clientY-r.top)/r.height-.5)*2)});
 w.addEventListener("pointerleave",function(){w.style.setProperty("--mx",0);w.style.setProperty("--my",0)});
+})();
+</script>
+<script>
+(function(){
+var P=document.getElementById("project"),T=document.getElementById("type"),M=document.getElementById("msg");
+if(!P||!T||!M)return;
+document.querySelectorAll(".pklink").forEach(function(a){a.addEventListener("click",function(){
+ P.value=a.getAttribute("data-project");P.dispatchEvent(new Event("change"));T.value=a.getAttribute("data-type");
+ M.value="Package: "+a.getAttribute("data-pkg")+" ("+a.getAttribute("data-price")+"). "+M.value.replace(/^Package: .*?\)\. /,"");
+})});
 })();
 </script>
 </body>
